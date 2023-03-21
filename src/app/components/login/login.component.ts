@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Employee } from 'src/app/model/Employee';
+// import { Employee } from 'src/app/model/Employee';
+import { Wallet } from 'src/app/model/wallet';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +9,21 @@ import { Employee } from 'src/app/model/Employee';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  employee: Employee={name:"" , password:""};
-  constructor(private router:Router){}
+  wallet:Wallet = new Wallet();
+  constructor(private router:Router){};
+  name?:string;
+  password?:string;
 
-  displayuserform(){
-    console.log("displayuserform()");
-    console.log(this.employee);
+  submitLoginForm(name?:string,password?:string){
+    console.log(name + "  " + password);
+  
   }
-  submitloginform(){
-    console.log("submitloginform()");
-    if(this.employee.name=="ford" && this.employee.password=="12345678")
-    this.router.navigateByUrl("home");
+   
+  
+  
+  displayUserForm(){
+    console.log("displayUserForm()");
+    console.log(this.wallet);
+  
   }
-
 }

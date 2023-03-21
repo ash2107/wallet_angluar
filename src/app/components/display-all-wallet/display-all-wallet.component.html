@@ -1,0 +1,29 @@
+<p>display-all-wallet works!</p>
+<div class="container">
+    <H1 class="heading">All Wallet details:</H1>
+
+    <table id="displayWallet" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Balance</th>
+                <!-- <th>Actions</th> -->
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let wal of wallet">
+                <td>{{wal.id}}</td>
+                <td>{{wal.name}}</td>
+                <td>{{wal.balance}}</td>
+                <!-- <td>
+                    <input type="button" class="btn btn-info" (click)="updateEmployee(emp)" value="Update">
+                
+                    <input type="button" class="btn btn-danger" (click)="deleteEmployee(emp.id)" value="Delete">
+                
+                </td> -->
+            </tr>
+        </tbody>
+
+    </table>

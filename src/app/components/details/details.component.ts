@@ -8,10 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent  implements OnInit{
    name?:string|null="";
+  router: any;
 
   constructor(private route:ActivatedRoute){}
   ngOnInit(): void {
-    this.name=this.route.snapshot.paramMap.get("name");
+    this.name=this.router.snapshot.paramMap.get("name");
 
   }
 
