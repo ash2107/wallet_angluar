@@ -1,0 +1,50 @@
+<p>login works!</p>
+<div class="container">
+    <div class="heading"><h1>Login Form</h1></div>
+     <!-- #userForm="ngForm"[disabled]="!userForm.valid "  -->
+    <form action= "/action_page.php" #userform="ngForm">
+        <!-- <label for="id">ID:</label>
+        <input type="number" [(ngModel)]="employee.id" name="id" id="id">
+        <br> -->
+        <!-- <div class="row">
+            <div class="col-25">
+
+            </div>
+            <div class="col-75">
+
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-25">
+                <label for="ename">Name:</label>
+            </div>
+            <div class="col-75">
+                <input type="text" [(ngModel)]="employee.name" #nameRef="ngModel" name=" ename " id="ename " pattern="[A-Za-z]{3,} " title="Only min 3 Char allowed " required>
+        
+                <div *ngIf="nameRef.invalid && (nameRef.touched || nameRef.dirty)">
+                    <p *ngIf="nameRef.errors?.['required'] " class="text-danger">Name is required</p>
+                    <p *ngIf=" nameRef.errors?.[ 'pattern'] " class="text-danger">Name must have atleast 3 charater.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="amountid ">Password:</label>
+            </div>
+            <div class="col-75">
+                <input type="password" [(ngModel)]="employee.password " #passwordRef="ngModel" name="epassword " id="epassword " required pattern="[a-zA-Z0-9]{8,">
+                <div *ngIf="passwordRef.invalid && (passwordRef.touched|| passwordRef.dirty)">
+                    <p *ngIf="passwordRef.errors?.['required'] " class="text-danger">Password is required</p>
+                    <p *ngIf=" passwordRef.errors?.[ 'pattern'] " class="text-danger">Password must be atleast 8 charaters</p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row" style="text-align:center">
+            <input type="submit" (click)="displayuserform() " value="Submit ">
+
+            
+        </div>
+  
+           </form>
+  </div> 
