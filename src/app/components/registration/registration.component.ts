@@ -16,6 +16,8 @@ export class RegistrationComponent {
 
     submitForm(){
       console.log("hello");
+      this.walletservice.addWallet(this.wallet);
+       console.log(this.wallet);
     }
     onSubmit(){
 
