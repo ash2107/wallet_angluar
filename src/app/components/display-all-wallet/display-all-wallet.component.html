@@ -18,9 +18,9 @@
                 <td>{{wlt.name}}</td>
                 <td>{{wlt.balance}}</td>
                 <td>
-                    <input type="button" class="btn btn-info" (click)="updateEmployee(emp)" value="Update">
+                    <input type="button" class="btn btn-info" (click)="updateWallet(wlt.id)" value="Update">
                 
-                    <input type="button" class="btn btn-danger" (click)="deleteEmployee(emp.id)" value="Delete">
+                    <input type="button" class="btn btn-danger" (click)="deleteWallet(wlt.id)" value="Delete">
                 
                 </td>
             </tr>

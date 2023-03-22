@@ -12,6 +12,12 @@ import { DetailsComponent } from './components/details/details.component';
 import { DisplayAllWalletComponent } from './components/display-all-wallet/display-all-wallet.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { FundsComponent } from './components/funds/funds.component';
+import { ShowAllWalletsComponent } from './components/show-all-wallets/show-all-wallets.component';
+// import { TransferFundsComponent } from './compinents/transfer-funds/transfer-funds.component';
+import { UpdateComponent } from './components/update/update.component';
+import { WithdrawFundsComponent } from './components/withdraw-funds/withdraw-funds.component';
+import { TransferFundsComponent } from './components/transfer-funds/transfer-funds.component';
 
 
 
@@ -25,7 +31,12 @@ import { HttpClientModule } from '@angular/common/http';
     DetailsComponent,
     // DisplayAllEmployeeComponent,
     DisplayAllWalletComponent,
-    SearchPipe
+    SearchPipe,
+    FundsComponent,
+    ShowAllWalletsComponent,
+    TransferFundsComponent,
+    UpdateComponent,
+    WithdrawFundsComponent
     
   ],
   imports: [

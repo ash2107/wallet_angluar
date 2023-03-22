@@ -16,7 +16,8 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private walletservice:WalletService, private walletBackendService:WalletBackendService) {}
 
-
+  msg: string = '';
+errormsg: string = '';
   ngOnInit(): void {
   }
 
@@ -28,6 +29,7 @@ export class RegistrationComponent implements OnInit {
 
     // this.walletservice.addWallet(this.wallet);
     // console.log(this.wallet);
+    
 
     let wltPost: Observable<any> = this.walletBackendService.addWallet(this.wallet);
     wltPost.subscribe(
