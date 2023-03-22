@@ -1,5 +1,5 @@
-<div class="="container>
-    <h1 class="">withdraw-funds</h1>
+<div class="container">
+    <h1 class="heading">Withdraw Funds</h1>
     <form action="/action_page.php">
     
        <div class="row">
@@ -8,30 +8,30 @@
             </div>
             <div class="col-75">
                 <input type="number" [(ngModel)]= "id" #idRef="ngModel" name="wname" id="wid" min = 0
-        title="Enter positive id only" required>
-        <div *ngIf="idRef.invalid && (idRef.touched || idRef.dirty)">
-            <p *ngIf="idRef.errors?.['required']" class="text-danger">Id is required, cant be blank.</p>
-            <p *ngIf="idRef.errors?.['min']" class="text-danger">Id nust be a positive number</p>
-        </div>
+                title="Enter positive id only" required>
+                <div *ngIf="idRef.invalid && (idRef.touched || idRef.dirty)">
+                <p *ngIf="idRef.errors?.['required']" class="text-danger">Id is required, cant be blank.</p>
+                <p *ngIf="idRef.errors?.['min']" class="text-danger">Id nust be a positive number</p>
+                 </div>
             </div>
         </div>
 
-             <div class="row">
+        <div class="row">
             <div class="col-25">
                 <label for = "password">Amount to be Debited : </label>
             </div>
             <div class="col-75">
                 <input type="number" [(ngModel)] = "balance" #balanceRef = "ngModel" name = "wbalance" id = "wbalance" min = 0 required>
-        <div *ngIf="balanceRef.invalid && (balanceRef.touched || balanceRef.dirty)">
-            <p *ngIf="balanceRef.errors?.['required']" class="text-danger">Balance is required, cant be blank.</p>
-            <p *ngIf="balanceRef.errors?.['min']" class="text-danger">Balance must be atleast 8 charaters</p>
-        </div>
+                <div *ngIf="balanceRef.invalid && (balanceRef.touched || balanceRef.dirty)">
+                <p *ngIf="balanceRef.errors?.['required']" class="text-danger">Balance is required, cant be blank.</p>
+                 <p *ngIf="balanceRef.errors?.['min']" class="text-danger">Balance must be atleast 8 charaters</p>
+                 </div>
             </div>
             
                 
         </div>
 
-        <div class="row">
+        <div class="row" style="text-align:center" >
             <input type = "button" (click) = "withdrawFunds(id,balance)" value = "submit">
             
         </div>

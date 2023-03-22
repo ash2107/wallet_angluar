@@ -1,4 +1,4 @@
-<p>display-all-wallet works!</p>
+<!-- <p>display-all-wallet works!</p> -->
 <div class="container">
     <H1 class="heading">All Wallet details:</H1>
 
@@ -17,12 +17,8 @@
                 <td>{{wlt.id}}</td>
                 <td>{{wlt.name}}</td>
                 <td>{{wlt.balance}}</td>
-                <td>
-                    <input type="button" class="btn btn-info" (click)="updateWallet(wlt.id)" value="Update">
-                
-                    <input type="button" class="btn btn-danger" (click)="deleteWallet(wlt.id)" value="Delete">
-                
-                </td>
+                <td><input type = "button" class = "btn btn-danger" value="Delete" (click)="deleteWallet(wlt.id)" >&nbsp;
+                    <input type = "button" class = "btn btn-info" value="Update" (click)="updateWallet(wlt)" ></td>
             </tr>
         </tbody>
 

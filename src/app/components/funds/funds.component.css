@@ -10,7 +10,7 @@
     box-shadow: #500427;
   }
   
-  input[type=text],[type=password], select, textarea {
+  input[type=number],[type=password], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -23,7 +23,7 @@
     display: inline-block;
   }
   
-  input[type=submit] {
+  input[type=button] {
     background-color: #a35b79;
     color: white;
     padding: 12px 20px;
@@ -33,7 +33,7 @@
    
   }
   
-  input[type=submit]:hover {
+  input[type=button]:hover {
     background-color: #250514;
   }
   
@@ -60,9 +60,18 @@
   }
   
   .col-75 {
-    float: left;
+    float: right;
     width: 75%;
     margin-top: 6px;
+    width: 75%;
     font-family: "Times New Roman", Times, serif;
 
+  }
+  /* .row{
+    display: inline-flexbox;
+  } */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
   }

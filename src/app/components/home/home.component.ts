@@ -14,4 +14,19 @@ export class HomeComponent {
   displaydetails(){
     console.log("clicked");
   }
+  addFunds(){
+    this.router.navigate(['funds']);
+
+  }
+
+  withdrawFunds(){
+    this.router.navigate(['withdrawFunds']);
+
+  }
+
+  transferFunds(){
+    this.router.navigate(['transferFunds']);
+
+  }
+
 }

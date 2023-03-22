@@ -64,6 +64,7 @@ export class DisplayAllWalletComponent implements OnInit{
     console.log("Update Wallet "+ wlt);
     this.router.navigate(['update',wlt.id]);
   }
+  
   query:string = "";
 
 

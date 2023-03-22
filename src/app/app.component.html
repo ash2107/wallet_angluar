@@ -1,4 +1,4 @@
-<h1 class="heading ">Online Wallet</h1>
+<h1 class="heading">Online Wallet</h1>
 <!-- <nav class="navbar navbar-inverse">
     <ul>
         <li><a routerLink="home">Home</a></li>
@@ -12,22 +12,30 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<style>
+   /* .navbar-brand > img {
+      max-height: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+      object-fit: contain;
+    } */
+</style>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" routerLink="home">Wallet</a>
+        <a class="navbar-brand" routerLink="home"> <img src="logoimage.png" alt="logo" style="width:40px;"></a>
+        
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Features<span class="caret"></span></a>
+        <li class="active"><a href="#"  routerLink="home" >Home</a></li>
+        <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a routerLink="withdrawFunds">Withdraw Funds</a></li>
-            <!-- <li><a routerLink="home">Update Funds</a></li> -->
-            <li><a routerLink="home">Delete Funds</a></li>
-            <li><a routerLink="home">Add Funds</a></li>
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
           </ul>
-        </li>
+        </li> -->
         <li><a routerLink="wallet">All wallet</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

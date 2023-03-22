@@ -1,39 +1,41 @@
-<p>funds works!</p>
+<!-- <p works</p> -->
 <div class="container">
+    <h1 class="heading">Add Funds</h1>
     <form  action= "/action_page.php">
         <div class="row">
             <div class="col-25">
                 <label for = "id">Id : </label>
             </div>
-            <div class="col-75">
-
+            <div class="col-75">                
                 <input type="number" [(ngModel)]= "id" #idRef="ngModel" name="wname" id="wid" min = 0
                 title="Enter positive id only" required>
                 <div *ngIf="idRef.invalid && (idRef.touched || idRef.dirty)">
                     <p *ngIf="idRef.errors?.['required']" class="text-danger">Id is required, cant be blank.</p>
                     <p *ngIf="idRef.errors?.['min']" class="text-danger">Id nust be a positive number</p>
                 </div>
-
             </div>
-
-            <div class="row">
-               <div class="col-25">
-                <label for = "password">Amount to be Credited : </label>
-              </div>
-               <div class="col-75">
-                <input type="number" [(ngModel)] = "balance" #balanceRef = "ngModel" name = "wbalance" id = "wbalance" min = 0 required>
-                <div *ngIf="balanceRef.invalid && (balanceRef.touched || balanceRef.dirty)">
-                    <p *ngIf="balanceRef.errors?.['required']" class="text-danger">Balance is required, cant be blank.</p>
-                    <p *ngIf="balanceRef.errors?.['min']" class="text-danger">Balance must be atleast 8 charaters</p>
+        </div>
+        <div class="row">
+                <div class="col-25" style="text-align: left;">
+                    <label for = "password">Amount to be credited:</label>
                 </div>
-               </div>
-             </div>
+                <div class="col-75">
 
-              <div class="row">
+                    <input type="number" [(ngModel)] = "balance" #balanceRef = "ngModel" name = "wbalance" id = "wbalance" min = 0 required>
+                    <div *ngIf="balanceRef.invalid && (balanceRef.touched || balanceRef.dirty)">
+                     <p *ngIf="balanceRef.errors?.['required']" class="text-danger">Balance is required, cant be blank.</p>
+                     <p *ngIf="balanceRef.errors?.['min']" class="text-danger">Balance must be atleast 8 charaters</p>
+                    </div>
+                </div>
+
+         </div>
+
+            
+              <div class="row" style="text-align:center">
                 <input type = "button" (click) = "addfunds(id,balance)" value = "submit">
               </div>
 
-        </div>
+        
     </form>
 
 </div>
