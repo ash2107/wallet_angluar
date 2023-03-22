@@ -10,6 +10,10 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { DetailsComponent } from './components/details/details.component';
 // import { DisplayAllEmployeeComponent } from './components/display-all-employee/display-all-employee.component';
 import { DisplayAllWalletComponent } from './components/display-all-wallet/display-all-wallet.component';
+import { SearchPipe } from './pipes/search.pipe';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -20,13 +24,15 @@ import { DisplayAllWalletComponent } from './components/display-all-wallet/displ
     PagenotfoundComponent,
     DetailsComponent,
     // DisplayAllEmployeeComponent,
-    DisplayAllWalletComponent
+    DisplayAllWalletComponent,
+    SearchPipe
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

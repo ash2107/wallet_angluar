@@ -8,21 +8,21 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Balance</th>
-                <!-- <th>Actions</th> -->
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
 
-            <tr *ngFor="let wal of wallet">
-                <td>{{wal.id}}</td>
-                <td>{{wal.name}}</td>
-                <td>{{wal.balance}}</td>
-                <!-- <td>
+            <tr *ngFor="let wlt of wallet">
+                <td>{{wlt.id}}</td>
+                <td>{{wlt.name}}</td>
+                <td>{{wlt.balance}}</td>
+                <td>
                     <input type="button" class="btn btn-info" (click)="updateEmployee(emp)" value="Update">
                 
                     <input type="button" class="btn btn-danger" (click)="deleteEmployee(emp.id)" value="Delete">
                 
-                </td> -->
+                </td>
             </tr>
         </tbody>
 
